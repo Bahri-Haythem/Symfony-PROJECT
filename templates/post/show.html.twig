@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+<!--affichage d'un seul post-->
+{% block body %}
+    <!--afficher le titre-->
+    <h1 class="m-3">
+        {{post.title}}
+    </h1>
+    <!--afficher le contenu-->
+    <p class="m-2">
+        {{post.text}}
+    </p>
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+    <section class="banner" role="banner">
+        <div class="mt-5">
+            <div class="col-md-10 col-md-offset-1">
+                <div>
+                    {% if app.user %}
+                        <!--si user est connecte-->
+                        <h1>
+                            welcome {{ app.user.username }}
+                        </h1>
+                    {% else %}
+                        <!--sinon-->
+                        <h1>Welcome to My Site</h1>
+                    {% endif %}
+                    <p class="mb-5">you can post here whatever you want</p>
+                    <a href="#" class="btn btn-large btn-dark mb-5">Find out more</a>
+                </div><!-- banner text -->
+            </div>
+        </div>
+    </section><!-- banner -->
+    <section id="features" class="features section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 feature text-center">
+                    <span class="icon icon-tools"></span>
+                    <div class="feature-content">
+                        <h5>Easily Connect</h5>
+                        <p>Create your account and connect</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 feature text-center">
+                    <span class="icon icon-desktop"></span>
+                    <div class="feature-content">
+                        <h5>Responsive Ready</h5>
+                        <p>this site is responsive.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 feature text-center">
+                    <span class="icon icon-lightbulb"></span>
+                    <div class="feature-content">
+                        <h5>Modern Design</h5>
+                        <p>the design is pretty simple </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 feature text-center">
+                    <span class="icon icon-genius"></span>
+                    <div class="feature-content">
+                        <h5>add your posts</h5>
+                        <p>Create your own posts with whatever you like.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 feature text-center">
+                    <span class="icon icon-briefcase"></span>
+                    <div class="feature-content">
+                        <h5>All secured in DB</h5>
+                        <p>all you infos are in a secured database and passwords are hashed.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 feature text-center">
+                    <span class="icon icon-download"></span>
+                    <div class="feature-content">
+                        <h5>Browse for Free</h5>
+                        <p>just start already.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- features -->
+{% endblock %}
